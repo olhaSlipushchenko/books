@@ -9,13 +9,18 @@ import HeadLine from './HeadLine';
 const BookList = () => {
   return (
     <>
-      <HeadLine /> 
+      <HeadLine />
       <section className="booklist">
         <EventExamples />
         {books.map((book, index) => {
-          return <Book {...book} key={book.id} number= {index}/>;
+          return <Book {...book} key={book.id} number={index} />;
         })}
       </section>
+      <p className="link">
+        <a href="https://github.com/olhaSlipushchenko/books.git">
+          open-sourse code at GitHub
+        </a>
+      </p>
     </>
   );
 };
@@ -33,6 +38,8 @@ const EventExamples = () => {
       <button onClick= {() => console.log('click me')} >click me</button>
   </section>
 };
+
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
